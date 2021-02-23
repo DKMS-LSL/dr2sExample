@@ -1,0 +1,120 @@
+datadir: ~/exampleData 
+outdir: output
+pipeline: SR
+format: yaml
+longreads:
+  type: pacbio
+  dir: sequel
+shortreads:
+  type: illumina
+  dir: Illumina
+utrLength:
+  DRB1:
+    start: 50.0
+    end: -1.0
+opts:
+  mapInit:
+    includeDeletions: yes
+    includeInsertions: yes
+    callInsertionThreshold: 0.18
+    microsatellite: yes
+    forceMapping: yes
+    minMapq: 0.0
+    topx: no
+    pickiness: 0.8
+    increasePickiness: 1.0
+    lowerLimit: 200.0
+    updateBackgroundModel: yes
+    createIgv: yes
+    plot: yes
+  partitionLongreads:
+    threshold: 0.2
+    distAlleles: 2.0
+    skipGapFreq: 0.8
+    noGapPartitioning: yes
+    selectCorrelatedPositions: no
+    measureOfAssociation: cramer.V
+    selectByColSum: no
+    proportionOfOverlap: 0.1
+    minimumExpectedDifference: 0.06
+    selectAllelesBy: distance
+    minClusterSize: 20.0
+    pickiness: 0.2
+    lowerLimit: 40.0
+    plot: yes
+  mapIter:
+    iterations: 2.0
+    columnOccupancy: 0.2
+    callInsertionThreshold: 0.18
+    createIgv: yes
+    plot: yes
+  mapFinal:
+    includeDeletions: yes
+    includeInsertions: yes
+    callInsertionThreshold: 0.18
+    trimPolymorphicEnds: no
+    createIgv: yes
+    plot: yes
+  report:
+    remap: yes
+    threshold: ~
+    checkHpCount: yes
+    hpCount: 10.0
+    blockWidth: 80.0
+    createIgv: yes
+samples:
+  '1':
+    sampleId: sample3
+    locus: HLA-A
+    reference: HLA-A
+    distAlleles: 2
+    details:
+      second: another
+      third: .na
+      notes: ~
+  '2':
+    sampleId: sample3
+    locus: HLA-B
+    reference: HLA-B
+    distAlleles: 2
+    details:
+      second: another
+      third: .na
+      notes: ~
+  '3':
+    sampleId: sample3
+    locus: HLA-C
+    reference: HLA-C
+    distAlleles: 2
+    details:
+      second: another
+      third: .na
+      notes: ~
+  '4':
+    sampleId: sample3
+    locus: HLA-DPB1
+    reference: HLA-DPB1
+    distAlleles: 2
+    details:
+      second: another
+      third: .na
+      notes: ~
+  '5':
+    sampleId: sample3
+    locus: HLA-DRB1
+    reference: HLA-DRB1
+    distAlleles: 2
+    details:
+      second: another
+      third: .na
+      notes: ~
+  '6':
+    sampleId: sample3
+    locus: HLA-DQB1
+    reference: HLA-DQB1
+    distAlleles: 2
+    details:
+      second: another
+      third: .na
+      notes: ~
+

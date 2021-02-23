@@ -1,0 +1,9 @@
+{
+ "reuse_sessions_for_project_links": true,
+ "restore_source_documents": false,
+ "load_workspace": false,
+ "initial_working_directory": "~/exampleProject",
+ "always_save_history": false,
+ "restore_last_project": false,
+ "posix_terminal_shell": "bash"
+}
